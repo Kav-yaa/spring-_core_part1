@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean class=" com.sp.Marker" id="myMarker" scope="prototype"></bean>
+
+<bean class="com.sp.setter.Person" id="person">
+<property name="email" value="priya@gmail.com"></property>
+</bean>
+
+<bean class="com.sp.constructor.Teacher" id="teacher">
+<constructor-arg value="Simran"></constructor-arg>
+</bean>
+
+<bean class="com.sp.ref.USB" id="myusb"></bean>
+<bean class="com.sp.ref.Computer" id="mycomputer"> 
+<property name="refusb" ref="myusb"></property>
+</bean>
+
+
+<bean class="com.sp.SampleBean" id="sb" >
+<constructor-arg value="100"></constructor-arg></bean>
+
+</beans>
